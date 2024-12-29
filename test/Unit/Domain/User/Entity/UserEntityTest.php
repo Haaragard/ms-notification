@@ -6,8 +6,8 @@ namespace Test\Unit\Domain\User\Entity;
 
 use App\Domain\User\Entity\UserEntity;
 use PHPUnit\Framework\Attributes\Test;
-use PHPUnit\Framework\TestCase;
 use Test\Fixture\Domain\User\UserEntityEntityFixture;
+use Test\TestCase;
 
 class UserEntityTest extends TestCase
 {
