@@ -1,1 +1,5 @@
-.docker
+**
+!app/
+!bin/
+!config/
+!composer.*
