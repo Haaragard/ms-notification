@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Infrastructure\Config\Handler;
 
-use App\Infrastructure\Http\Resource\_Shared\Error\FailedValidationResourceResource;
+use App\Infrastructure\Http\Resource\_Shared\Error\FailedValidationErrorResource;
 use Hyperf\HttpMessage\Stream\SwooleStream;
 use Hyperf\Validation\ValidationException;
 use Hyperf\Validation\ValidationExceptionHandler as HyperfValidationExceptionHandler;
@@ -21,7 +21,7 @@ class ValidationExceptionHandler extends HyperfValidationExceptionHandler
             $response = $response->addHeader('content-type', 'application/json; charset=utf-8');
         }
 
-        $validationErrorResource = new FailedValidationResourceResource($throwable->validator->errors());
+        $validationErrorResource = new FailedValidationErrorResource($throwable->validator->errors());
 
         return $response->setStatus($throwable->status)
             ->setBody(new SwooleStream(json_encode($validationErrorResource->toArray())));

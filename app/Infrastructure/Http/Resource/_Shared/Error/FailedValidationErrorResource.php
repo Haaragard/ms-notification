@@ -5,7 +5,7 @@ namespace App\Infrastructure\Http\Resource\_Shared\Error;
 use App\Infrastructure\Http\Resource\_Shared\AbstractResource;
 use Hyperf\Contract\MessageBag;
 
-class FailedValidationResourceResource extends AbstractResource
+class FailedValidationErrorResource extends AbstractResource
 {
     public function __construct(protected MessageBag $messageBag)
     {
@@ -15,7 +15,7 @@ class FailedValidationResourceResource extends AbstractResource
     {
         return [
             'message' => 'The given data was invalid.',
-            'errors' => $this->messageBag->toArray(),
+            'errors' => $this->messageBag->getMessages(),
             'field_errors' => $this->messageBag->keys(),
         ];
     }
