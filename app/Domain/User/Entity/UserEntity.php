@@ -12,7 +12,9 @@ use function Hyperf\Config\config;
 class UserEntity extends Entity
 {
     private string $name;
+
     private string $email;
+
     private string $password;
 
     public function __construct(
