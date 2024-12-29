@@ -1,0 +1,16 @@
+services:
+  app:
+    container_name: ms-notification
+    build:
+      context: .
+      dockerfile: .docker/php/Dockerfile
+    entrypoint: "/bin/bash -c 'composer install && php bin/hyperf.php server:watch'"
+    volumes:
+        - .:/var/www/ms-notification
+    ports:
+        - "80:9501"
+    environment:
+      - USER_ID=${UID:-1000}
+      - GROUP_ID=${GID:-1000}
+      - APP_ENV=dev
+      - SCAN_CACHEABLE=false
