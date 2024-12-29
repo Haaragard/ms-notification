@@ -4,11 +4,15 @@ services:
     build:
       context: .
       dockerfile: .docker/php/Dockerfile
+    extra_hosts:
+        - "host.docker.internal:host-gateway"
     entrypoint: "/bin/bash -c 'composer install && php bin/hyperf.php server:watch'"
     volumes:
         - .:/var/www/ms-notification
+        - .docker/php/config/custom_xdebug.ini:/etc/php83/conf.d/99_xdebug.ini
     ports:
         - "80:9501"
+        - "9003:9003"
     restart: unless-stopped
     environment:
       - USER_ID=${UID:-1000}
