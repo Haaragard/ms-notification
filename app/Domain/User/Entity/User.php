@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace App\Domain\User\Entity;
 
+use App\Domain\_Shared\Entity;
+
 class User extends Entity
 {
     public function __construct(
