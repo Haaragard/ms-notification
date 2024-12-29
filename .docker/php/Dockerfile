@@ -34,6 +34,5 @@ USER appuser
 RUN composer install
 
 EXPOSE 9501
-EXPOSE 9003
 
 ENTRYPOINT ["php", "/var/www/ms-notification/bin/hyperf.php", "server:watch"]
