@@ -1,4 +1,4 @@
-FROM hyperf/hyperf:8.3-alpine-v3.20-swoole-v6.0.0 as base
+FROM hyperf/hyperf:8.3-alpine-v3.20-swoole-v5.1.6 as base
 
 LABEL authors="haaragard"
 

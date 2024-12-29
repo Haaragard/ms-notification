@@ -15,7 +15,7 @@ This is a microservice that sends notifications to users.
 ### Used Docker Images
 
 - PHP 8.3
-- hyperf/hyperf:8.3-alpine-v3.20-swoole-v6.0.0
+- hyperf/hyperf:8.3-alpine-v3.20-swoole-v5.1.6
 - composer:2.8.4
 
 
