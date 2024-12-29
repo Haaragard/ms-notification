@@ -10,8 +10,9 @@ use App\Domain\User\Repository\UserRepositoryInterface;
 
 class UserRepository implements UserRepositoryInterface
 {
-    public function create(Entity|UserEntity $entity): void
+    public function create(Entity|UserEntity $entity): Entity|UserEntity
     {
         // TODO: Implement create() method.
+        return $entity;
     }
 }
