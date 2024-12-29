@@ -1,4 +1,5 @@
 **
+!.docker/php/config/custom_xdebug.ini
 !app/
 !bin/
 !config/

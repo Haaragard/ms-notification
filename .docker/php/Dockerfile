@@ -19,6 +19,10 @@ LABEL authors="haaragard"
 # Copy all files to the container
 COPY . .
 
+RUN apk add php83-pecl-xdebug
+
+COPY .docker/php/config/custom_xdebug.ini /etc/php83/conf.d/99_xdebug.ini
+
 # Create new user with same user id as host user
 RUN addgroup -S appgroup -g $GROUP_ID \
     && adduser -S appuser -u $USER_ID -G appgroup -G root -G www-data

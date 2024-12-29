@@ -14,3 +14,4 @@ services:
       - GROUP_ID=${GID:-1000}
       - APP_ENV=dev
       - SCAN_CACHEABLE=false
+      - XDEBUG_MODE=${XDEBUG_MODE:-off}
