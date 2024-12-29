@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use app\Infrastructure\Http\Controller\Index\IndexController;
+use App\Infrastructure\Http\Controller\Index\IndexController;
 use Hyperf\HttpServer\Router\Router;
 
 Router::addRoute(['GET', 'POST', 'HEAD'], '/', [IndexController::class, 'index']);

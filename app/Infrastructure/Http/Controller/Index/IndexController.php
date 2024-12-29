@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace app\Infrastructure\Http\Controller\Index;
+namespace App\Infrastructure\Http\Controller\Index;
 
-use app\Infrastructure\Http\Controller\_Shared\AbstractController;
+use App\Infrastructure\Http\Controller\_Shared\AbstractController;
 
 class IndexController extends AbstractController
 {

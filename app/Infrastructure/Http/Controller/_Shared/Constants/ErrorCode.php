@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\Infrastructure\Http\Controller\_Shared\Constants;
+namespace App\Infrastructure\Http\Controller\_Shared\Constants;
 
 use Hyperf\Constants\AbstractConstants;
 use Hyperf\Constants\Annotation\Constants;
