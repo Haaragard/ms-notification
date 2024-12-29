@@ -6,7 +6,7 @@ namespace Test\Unit\Domain\User\Entity;
 
 use App\Domain\User\Entity\UserEntity;
 use PHPUnit\Framework\Attributes\Test;
-use Test\Fixture\Domain\User\UserEntityEntityFixture;
+use Test\Fixture\Domain\User\UserEntityFixture;
 use Test\TestCase;
 
 class UserEntityTest extends TestCase
@@ -15,7 +15,7 @@ class UserEntityTest extends TestCase
     public function shouldInstantiateSuccessfully(): void
     {
         // Arrange
-        $userData = UserEntityEntityFixture::data();
+        $userData = UserEntityFixture::data();
 
         // Act
         $entity = new UserEntity(

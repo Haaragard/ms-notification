@@ -6,5 +6,5 @@ namespace App\Domain\_Shared;
 
 interface RepositoryInterface
 {
-    public function create(Entity $entity): Entity;
+    public function create(AbstractEntity $entity): AbstractEntity;
 }

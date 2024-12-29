@@ -11,7 +11,7 @@ use App\Domain\User\Entity\UserEntity;
 use App\Domain\User\Repository\UserRepositoryInterface;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\MockObject\MockObject;
-use Test\Fixture\Domain\User\UserEntityEntityFixture;
+use Test\Fixture\Domain\User\UserEntityFixture;
 use Test\TestCase;
 
 class UserCreateUseCaseTest extends TestCase
@@ -34,7 +34,7 @@ class UserCreateUseCaseTest extends TestCase
     public function shouldCreateUserSuccessfully(): void
     {
         // Arrange
-        $userData = UserEntityEntityFixture::data();
+        $userData = UserEntityFixture::data();
         $input = new UserCreateInput(...$userData);
 
         $this->userRepository->expects($this->once())

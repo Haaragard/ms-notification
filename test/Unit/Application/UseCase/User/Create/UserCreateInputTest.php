@@ -7,7 +7,7 @@ namespace Test\Unit\Application\UseCase\User\Create;
 use App\Application\UseCase\User\Create\UserCreateInput;
 use PHPUnit\Framework\Attributes\Test;
 use Test\TestCase;
-use Test\Fixture\Domain\User\UserEntityEntityFixture;
+use Test\Fixture\Domain\User\UserEntityFixture;
 
 class UserCreateInputTest extends TestCase
 {
@@ -15,7 +15,7 @@ class UserCreateInputTest extends TestCase
     public function shouldInstantiateSuccessfully(): void
     {
         // Arrange
-        $userData = UserEntityEntityFixture::data();
+        $userData = UserEntityFixture::data();
 
         // Act
         $input = new UserCreateInput(...$userData);

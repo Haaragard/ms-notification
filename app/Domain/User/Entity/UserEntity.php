@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace App\Domain\User\Entity;
 
-use App\Domain\_Shared\Entity;
+use App\Domain\_Shared\AbstractEntity;
 use InvalidArgumentException;
 
 use function Hyperf\Config\config;
 
-class UserEntity extends Entity
+class UserEntity extends AbstractEntity
 {
     private string $name;
 

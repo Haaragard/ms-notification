@@ -5,9 +5,9 @@ declare(strict_types=1);
 namespace Test\Fixture\Domain\User;
 
 use App\Domain\User\Entity\UserEntity;
-use Test\Fixture\Domain\_Shared\EntityFixtureAbstract;
+use Test\Fixture\Domain\_Shared\AbstractEntityFixture;
 
-class UserEntityEntityFixture extends EntityFixtureAbstract
+class UserEntityFixture extends AbstractEntityFixture
 {
     protected static string $entityClass = UserEntity::class;
 
