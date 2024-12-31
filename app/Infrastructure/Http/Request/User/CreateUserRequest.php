@@ -15,13 +15,16 @@ class CreateUserRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => 'required|string',
+            'name' => 'required|string|min:3|max:50',
             'email' => 'required|email',
-            'password' => Password::min(6)
-                ->letters()
-                ->numbers()
-                ->symbols()
-                ->max(30),
+            'password' => [
+                'required',
+                Password::min(6)
+                    ->letters()
+                    ->numbers()
+                    ->symbols()
+                    ->max(30)
+            ],
         ];
     }
 }
