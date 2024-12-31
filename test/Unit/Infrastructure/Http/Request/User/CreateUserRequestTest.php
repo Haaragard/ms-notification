@@ -57,7 +57,7 @@ class CreateUserRequestTest extends TestCase
             ->method('getQueryParams')
             ->willReturn([]);
 
-//        Context::set(ServerRequestInterface::class, $requestMock);
+        Context::set(ServerRequestInterface::class, $requestMock);
 
         $request = $this->container->make(CreateUserRequest::class);
 
