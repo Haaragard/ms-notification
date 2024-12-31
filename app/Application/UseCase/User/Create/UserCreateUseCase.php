@@ -8,7 +8,7 @@ use App\Domain\User\Entity\UserEntity;
 use App\Domain\User\Repository\UserRepositoryInterface;
 use Hyperf\Di\Annotation\Inject;
 
-class UserCreateUseCase
+class UserCreateUseCase implements UserCreateUseCaseInterface
 {
     #[Inject]
     protected UserRepositoryInterface $userRepository;
